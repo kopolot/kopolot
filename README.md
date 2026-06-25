@@ -11,9 +11,11 @@ Backend Developer specializing in high-performance web applications, e-commerce 
 ### 📊 GitHub Stats & Technologies
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=kopolot&show_icons=true&theme=dark&hide_border=true&count_private=true" height="150" alt="Konrad's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=kopolot&show_icons=true&theme=dark&hide_border=true&count_private=true&hide_rank=true" height="150" alt="Konrad's GitHub stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kopolot&layout=compact&theme=dark&hide_border=true&langs_count=6" height="150" alt="Konrad's Top Languages" />
 </p>
+
+> 💡 *Note: My primary commercial and daily development history is hosted on **[GitLab](https://gitlab.com/kopolot)**.*
 
 ---
 
@@ -33,9 +35,9 @@ Backend Developer specializing in high-performance web applications, e-commerce 
 
 ### 🧠 My Engineering Principles
 
-1.  **Pragmatism over Hype:** I choose technologies based on business constraints and system performance requirements, not what's currently trending.
-2.  **Write Tests, Sleep Peacefully:** Code without automated tests is just a liability. I back critical business paths with integration and feature tests.
-3.  **Automation Everywhere:** If a task needs to be done more than twice, it deserves a Docker container, a background job, or an automated script.
+1. **Pragmatism over Hype:** I choose technologies based on business constraints and system performance requirements, not what's currently trending.
+2. **Write Tests, Sleep Peacefully:** Code without automated tests is just a liability. I back critical business paths with integration and feature tests.
+3. **Automation Everywhere:** If a task needs to be done more than twice, it deserves a Docker container, a background job, or an automated script.
 
 ---
 
