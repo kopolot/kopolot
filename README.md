@@ -1,9 +1,9 @@
 ## Hi, I'm Konrad 👋
 
-Full-Stack / Backend Developer specializing in robust web applications, data consistency, and reliable backend services.
+Full-Stack / Backend Developer specializing in high-performance web applications, data consistency, and distributed backend architectures.
 
 - 🛠️ **Backend Ecosystem:** PHP (Laravel, Symfony), Go (Golang)
-- 💾 **Databases & Infra:** PostgreSQL, MariaDB, Redis, RabbitMQ, Docker
+- 💾 **Databases & Infra:** PostgreSQL, MariaDB / Percona XtraDB Cluster, ProxySQL, Redis, Memcached, RabbitMQ, Elasticsearch, Docker
 - 🚀 **Frontend Integration:** Inertia.js (Vue/React), Nuxt, Tailwind, TypeScript
 
 ---
@@ -11,8 +11,8 @@ Full-Stack / Backend Developer specializing in robust web applications, data con
 ### 🛠️ Tech Stack & Tools
 
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white) ![Symfony](https://img.shields.io/badge/Symfony-000000?style=flat-square&logo=symfony&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)  
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white) ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white) ![Inertia.js](https://img.shields.io/badge/Inertia.js-9553E8?style=flat-square&logo=inertia&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=mariadb&logoColor=white) ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![Memcached](https://img.shields.io/badge/Memcached-000000?style=flat-square&logo=memcached&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white)  
+![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white) ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white) ![Inertia.js](https://img.shields.io/badge/Inertia.js-9553E8?style=flat-square&logo=inertia&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![k6](https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6&logoColor=white)
 
 > 💡 *Note: My primary commercial and daily development history is hosted on **[GitLab](https://gitlab.com/kopolot)**.*
 
@@ -21,12 +21,13 @@ Full-Stack / Backend Developer specializing in robust web applications, data con
 ### 🚀 Featured Projects
 
 * **[Smart Invoice Guard (SIG)](https://github.com/kopolot/example-smart-invoice-guard)**
-    * *What it is:* A showcase application built to demonstrate high-reliability backend patterns in web applications, focusing on data security, background task safety, and modern billing workflows.
-    * *Tech Stack:* Laravel 13, Inertia.js v3, Vue 3, Tailwind v4, MariaDB, Redis, Fortify, Sanctum.
+    * *What it is:* A high-reliability invoice management platform engineered to showcase advanced backend architecture, performance tuning, search capabilities, and distributed infrastructure resilience under load.
+    * *Tech Stack:* PHP 8.5, Laravel 13, Inertia.js v3, Vue 3, Tailwind v4, Percona XtraDB Cluster (PXC), ProxySQL, RabbitMQ, Redis, Memcached, Elasticsearch, k6.
     * *Key Implementations:*
-        * **Idempotent Payment Middleware:** Implemented atomic locking via Redis `Cache::add` (`SETNX` logic) protecting financial endpoints against parallel/double-submits.
-        * **Race-Condition Resistant Queues:** Configured unique job execution backed by database-level row locking (`lockForUpdate()`) and `DB::afterCommit()` dispatch handling for bulletproof document delivery.
-        * **Security & Compliance:** Transparent field encryption for tax numbers using Laravel Crypt adapters, comprehensive state history tracking via model observers (`InvoiceObserver`), and context-aware API rate limiting.
+        * **High Availability & Caching Layers:** Powered by a 3-node Percona XtraDB Cluster with ProxySQL load balancing, Memcached for hot-path dashboard stats, and Redis Lua scripts for real-time engagement analytics ("Invoice Pulse").
+        * **Elasticsearch Search Integration:** Custom indexing service utilizing `edge_ngram` prefixes for real-time document search with automated fallback to SQL `LIKE` queries.
+        * **Concurrency & Event-Driven Architecture:** Asynchronous PDF processing and email delivery queued via RabbitMQ with unique execution locks (`lockForUpdate()`), `DB::afterCommit()` dispatch handling, and atomic Redis `SETNX` payment idempotency middleware.
+        * **Automated Load Testing (k6):** Comprehensive k6 performance testing suite (Smoke, Load, Stress, Regression) integrated directly into GitHub Actions CI pipelines to enforce response time thresholds under load.
 
 * **[Wikipedia Scraper](https://github.com/kopolot/example-wikipedia-scraper)**
     * *What it is:* A concurrent data extraction pipeline and subscription dashboard designed to crawl, process, and filter high-throughput web structures.
@@ -53,9 +54,9 @@ Full-Stack / Backend Developer specializing in robust web applications, data con
 
 ### 🧠 My Engineering Approach
 
-1. **Focus on Data Integrity:** A clean UI doesn't matter if the database is prone to duplicate actions or race conditions. I care about how data flows, atomicity, and endpoint-level security (`SETNX` locks, transaction control).
-2. **Pragmatic Code Structure:** I don't write overengineered abstraction layers for simple applications. I follow framework standards (like Laravel's Form Requests, Symfony's Dependency Injection, or Go's standard layout) and write maintainable code.
-3. **Automated Stability:** Feature, unit, and integration tests (PHPUnit, GTest) are part of my definition of "done." I make sure critical business paths are covered before shipping to staging.
+1. **Focus on Data Integrity & Performance:** A clean UI doesn't matter if the database suffers from race conditions or slow queries. I focus on atomicity (`SETNX` locks, row locking), proper indexing, caching strategies, and robust distributed setups.
+2. **Pragmatic Architecture:** I avoid unnecessary complexity while adhering strictly to high-availability patterns. I follow framework standards (Laravel, Symfony, Go standard layout) and make intentional infrastructure choices (ProxySQL, RabbitMQ DLX, Elasticsearch).
+3. **Automated Reliability:** Unit, integration, and performance load tests (PHPUnit, k6, GTest) are integral to my definition of "done." I ensure application behavior and latency limits are validated before code reaches production.
 
 ---
 
