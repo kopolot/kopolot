@@ -1,6 +1,6 @@
 ## Hi, I'm Konrad 👋
 
-Full-Stack / Backend Developer specializing in high-performance web applications, data consistency, and distributed backend architectures.
+Full-Stack / Backend Developer specializing in high-performance web applications, high-scale e-commerce architectures, data consistency, and distributed backend systems.
 
 - 🛠️ **Backend Ecosystem:** PHP (Laravel, Symfony), Go (Golang)
 - 💾 **Databases & Infra:** PostgreSQL, MariaDB / Percona XtraDB Cluster, ProxySQL, Redis, Memcached, RabbitMQ, Elasticsearch, Docker
@@ -19,6 +19,11 @@ Full-Stack / Backend Developer specializing in high-performance web applications
 ---
 
 ### 🚀 Featured Projects
+
+* **[PrestaShop High-Volume Sync](https://github.com/kopolot/example-presta-stock-synch)**
+    * *What it is:* Asynchronous stock and price synchronization module engineered for enterprise PrestaShop 8.x stores handling 50k+ SKUs.
+    * *Tech Stack:* PHP 8.1+, Symfony Console, Direct SQL / Chunking, File Locks.
+    * *Key Implementations:* High-throughput batch processing bypassing standard ORM overhead, CLI integration for CRON scheduling, and concurrency execution locking.
 
 * **[Smart Invoice Guard (SIG)](https://github.com/kopolot/example-smart-invoice-guard)**
     * *What it is:* A high-reliability invoice management platform engineered to showcase advanced backend architecture, performance tuning, search capabilities, and distributed infrastructure resilience under load.
