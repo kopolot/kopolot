@@ -20,6 +20,14 @@ Full-Stack / Backend Developer specializing in high-performance web applications
 
 ### 🚀 Featured Projects
 
+* **[Async Webhook Delivery Engine](https://github.com/kopolot/example-async-weebhook-engine)**
+    * *What it is:* A resilient, high-throughput webhook delivery engine designed to process asynchronous event dispatches to external client endpoints under strict rate limits and fault conditions.
+    * *Tech Stack:* PHP 8.2+, Symfony 7, Symfony Messenger, Redis, Docker, PHPStan (Level 9), PHPUnit.
+    * *Key Implementations:*
+        * **Fault Tolerance & Resilience:** Integrated **Circuit Breaker Pattern** to halt dispatches to failing remote endpoints, paired with **Exponential Backoff Retries** and Dead Letter Queue (DLQ) routing for unrecoverable payloads.
+        * **Concurrency & Rate Limiting:** Implemented atomic Redis locks (`SETNX`) to enforce concurrency limits per client domain, preventing target server flooding and handling HTTP 429 backpressure.
+        * **Strict Code Quality:** Enforced strict typing (`declare(strict_types=1);`), PHPStan at Level 9, automated PHPUnit test suite, and automated GitHub Actions CI pipeline.
+
 * **[PrestaShop High-Volume Sync](https://github.com/kopolot/example-presta-stock-synch)**
     * *What it is:* Asynchronous stock and price synchronization module engineered for enterprise PrestaShop 8.x stores handling 50k+ SKUs.
     * *Tech Stack:* PHP 8.1+, Symfony Console, Direct SQL / Chunking, File Locks.
