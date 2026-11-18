@@ -2,8 +2,6 @@
 
 Backend Developer (PHP, Go) with ~4.5 years of commercial experience, mostly in e-commerce and integrations: high-performance web applications, data consistency and distributed backend systems.
 
-Since October 2026 I work as a **Delivery Engineer at [edoo](https://edoo.pl)**, building AI-based solutions and automating business processes on top of internal PHP systems.
-
 - 🛠️ **Backend Ecosystem:** PHP (Laravel, Symfony), Go (Golang)
 - 💾 **Databases & Infra:** PostgreSQL, MariaDB / Percona XtraDB Cluster, ProxySQL, Redis, Memcached, RabbitMQ, Elasticsearch, Docker
 - 🤖 **AI / LLM:** OpenAI-compatible APIs (OpenAI, Groq, OpenRouter, Ollama), LLM as an optional layer with deterministic fallbacks
@@ -58,7 +56,7 @@ Since October 2026 I work as a **Delivery Engineer at [edoo](https://edoo.pl)**,
         * **Async Event-Driven System:** Utilizes RabbitMQ and Redis to orchestrate independent workers across user registrations, subscription management (Basic/Premium tiers), and a dedicated notifications router (`cmd/notify`).
 
 * **[HC Sheets Sync](https://github.com/kopolot/hc-sheets-sync)**
-    * *What it is:* A private Android app that syncs daily health totals from Health Connect (Samsung Health) to Google Sheets, where an AI coaching bot reads them.
+    * *What it is:* A sideloaded Android app (not on the Play Store) that syncs daily health totals from Health Connect (Samsung Health) to Google Sheets, where an AI coaching bot reads them.
     * *Tech Stack:* Kotlin, Jetpack Compose, WorkManager, Health Connect API, Google Apps Script, DataStore.
     * *Key Implementations:*
         * **Self-healing Sync:** a daily background job re-sends the last 7 days and upserts them by date, so missed runs and late-logged meals catch up on their own. Workouts are upserted by session ID, so deleted sessions disappear from the sheet too.
